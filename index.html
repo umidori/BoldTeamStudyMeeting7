@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown="" data-separator="^\n---$" data-separator-vertical="^\n>>>$">
+				<script type="text/template">
+### Webアプリ基礎入門
+
+（株）ボールド 技術部 鳥海秀一
+
+---
+### Webアプリとは
+- - -
+* Webブラウザをクライアントとして利用するクライアント/サーバ型アプリケーション
+* 様々な要素技術から構成されている
+
+---
+### Webアプリの基礎を学習する意味
+- - -
+* Webアプリを作成する際に利用するフレームワークは技術の詳細を覆い隠す
+* このためWebアプリ作成中に自分たちが行なっていることの意味を理解することが難しい
+* 基礎を学習することで、それらの意味を理解できるようになり作成効率が高まる
+
+---
+### Webアプリを支える要素技術
+- - -
+* TCP/IP
+* HTTP
+* HTML
+* CSS
+* JavaScript
+
+---
+### Webアプリを学習するための道具
+- - -
+* Python
+* Curl
+* WireShark
+
+---
+### Pythonとは
+- - -
+* オープンソースのプログラミング言語
+* 数値計算からWebアプリ開発、AI開発など幅広い用途で利用されている
+
+---
+### Pythonのインストール方法
+- - -
+1. Windowsのコマンドプロンプトを起動する
+1. pythonコマンドを実行
+1. 起動したMicrosoft Storeで「入手」をクリック
+
+---
+### Curlとは
+- - -
+* Curl（Client for URL）はコマンドラインからHTTPリクエストを送信するためのオープンソースのツール
+* Windows10以降のWindowsには標準で搭載されている
+
+---
+### WireSharkとは
+- - -
+* ネットワークを流れるデータを補足して内容を解析・表示するネットワーク・アナライザ・ソフト
+* オープンソースで開発され、誰でも自由に使用することができるれる
+
+---
+### WireSharkのインストール方法
+- - -
+1. 下記のURLから自分のマシンにあったインストーラをダウンロードする
+	* https://www.wireshark.org/download.html
+1. ダウンロードしたインストーラを起動する
+1. Next→Noted→Next→…→Install→I Agree→Finishをクリックする
+
+---
+### HTTPの中身を覗いてみよう
+- - -
+1. Windowsのコマンドプロンプトで下記のコマンドを実行する
+	* python -m http.server
+1. Wiresharkを起動しlookbackアダプタを選択する
+1. Wiresharkのフィルタにhttpを入力する
+1. Windowsのコマンドプロンプトで下記のコマンドを実行する
+	* curl.exe http://localhost:8000
+
+---
+### まとめ
+- - -
+1. Webアプリの開発には基礎の理解が不可欠
+1. ツールをうまく活用すると理解の助けとなる
+
+				</script>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
